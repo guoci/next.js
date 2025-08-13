@@ -1484,6 +1484,8 @@ export default async function build(
               prefetchSegmentSuffix: RSC_SEGMENT_SUFFIX,
               prefetchSegmentDirSuffix: RSC_SEGMENTS_DIR_SUFFIX,
               clientParamParsing:
+                // NOTE: once this is the default for `clientSegmentCache`, this
+                // should exclusively be based on the `clientSegmentCache` flag.
                 config.experimental.clientParamParsing ?? false,
             },
             rewriteHeaders: {
